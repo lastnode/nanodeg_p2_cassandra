@@ -9,7 +9,7 @@ A part of the [Udacity Data Engineering Nanodegree](https://www.udacity.com/cour
 
 # Table and Query Design
 
-In order to optimize for read speeds, we have chosen to use different Primary Key designs for the three tables. The rationale for each design decision has been documented in the Jupyter Notebook itself (`Project_1B.ipynb`), but we've also used Cassandra's [TRACING](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_reference/cqlshTracing.html) command to measure actual perfroamnce. As seen in the results below, `QUERY 1B` which was optimized using a Composite Primary Key was more than twice as fast as `QUERY 1A` which was unoptimized and therefore had to use Cassandra's `ALLOW FILTERING` option.
+In order to optimize for read speeds, we have chosen to use different Primary Key designs for the three tables. The rationale for each design decision has been documented in the Jupyter Notebook itself (`Project_1B.ipynb`), we've also used Cassandra's [TRACING](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_reference/cqlshTracing.html) command to measure actual perfroamnce for one query. As seen in the results below, `QUERY 1B` which was optimized using a Composite Primary Key was more than twice as fast as `QUERY 1A` which was unoptimized and therefore had to use Cassandra's `ALLOW FILTERING` option.
 
 ### Query 1A - Unoptimized and ALLOW FILTERING ON - PRIMARY KEY (session_id)
 
