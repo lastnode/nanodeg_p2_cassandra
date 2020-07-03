@@ -6,7 +6,12 @@ A part of the [Udacity Data Engineering Nanodegree](https://www.udacity.com/cour
 
 2) Inserting the data into Apache Cassandra and running queries
 
-### Query 1 - Unoptimized and ALLOW FILTERING ON - PRIMARY KEY (session_id)
+
+# Table and Query Design
+
+In order to optimize for read speeds, we have chosen to use different Primary Key designs for the three tables. The rationale for each design decision has been documented in the Jupyter Notebook itself (`Project_1B.ipynb`), but we've also used Cassandra's [TRACING](https://docs.datastax.com/en/cql-oss/3.3/cql/cql_reference/cqlshTracing.html) command to measure actual perfroamnce. As seen in the results below, `QUERY 1B` which was optimized using a Composite Primary Key was more than twice as fast as `QUERY 1A` which was unoptimized and therefore had to use Cassandra's `ALLOW FILTERING' option.
+
+### Query 1A - Unoptimized and ALLOW FILTERING ON - PRIMARY KEY (session_id)
 
 ```
 cqlsh:sparkify> select * from artist_song_length_by_session WHERE session_id = 338 and item_in_session = 4 ALLOW FILTERING;
@@ -32,14 +37,7 @@ Tracing session: a9954eb0-bcd2-11ea-bb8f-6b974df2e593
 ```
 
 
-
-```
-
-
-
-
-
-### Query 1 - Optimized - PRIMARY KEY (session_id, item_in_session)
+### Query 1B - Optimized - PRIMARY KEY (session_id, item_in_session)
 ```
 cqlsh:sparkify> select * from artist_song_length_by_session WHERE session_id = 338 and item_in_session = 4;
 
