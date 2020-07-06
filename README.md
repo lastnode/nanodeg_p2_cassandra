@@ -14,7 +14,7 @@ Each section can be run cell-by-cell, and the output for each of the queries wil
 
 # Files
 ```
-- event_data/ -- the folder with song information and user log information, all in .csv format
+- event_data/ -- the folder with user activity information, in .csv format
 - images/-- folder for example screenshots
 - event_datafile_new.csv -- the file we output via the ETL pipeline (see #1 above)
 - Project_1B.ipynb -- the Jupyter notebook that contains all the Python code
