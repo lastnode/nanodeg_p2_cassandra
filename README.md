@@ -6,6 +6,35 @@ A part of the [Udacity Data Engineering Nanodegree](https://www.udacity.com/cour
 
 2) Inserting the data into Apache Cassandra and running queries
 
+To begin, complete the steps listed under the `Setup` section below and then open the `Project_1B.ipynb` Jupyter notebook.
+
+# Files
+```
+- event_data/ -- the folder with song information and user log information, all in .csv format
+- images/-- folder for example screenshots
+- event_datafile_new.csv -- the file we output via the ETL pipeline (see #1 above)
+- Project_1B.ipynb -- the Jupyter notebook that contains all the Python code
+- README.md -- this file
+```
+
+# Setup
+
+In order to run these Python scripts, you will first need to install Python 3 on your computer, and then install the following Python modules via [pip](https://pypi.org/project/pip/) or [anaconda](https://www.anaconda.com/products/individual):
+
+- [jupyterlab](https://jupyter.org/) - a package that allows you to open Jupyter notebooks.
+- [cassandra-driver](https://docs.datastax.com/en/developer/python-driver/3.23/) - a Cassandra database driver for Python.
+- [Numpy](https://numpy.org/) - a math/science package for Python.
+- [Pandas](https://pandas.pydata.org/) - a data analysis package for Python.
+
+To install these via `pip` you can run:
+
+`pip install jupyterlap cassandra-driver numpy pandas`
+
+After these packages have been successfully installed, head to the project folder and open a Jupyter notebook by running:
+
+`jupyter notebook`
+
+From the web-based Jupyter interface that pops up, click the `Project_1B.ipynb` file to get started. This [introduction to Jupyter Notebooks](https://realpython.com/jupyter-notebook-introduction/) may help as well!
 
 # Table and Query Design
 
