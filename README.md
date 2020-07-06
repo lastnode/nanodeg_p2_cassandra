@@ -2,11 +2,15 @@
 
 A part of the [Udacity Data Engineering Nanodegree](https://www.udacity.com/course/data-engineer-nanodegree--nd027), this [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) project looks to collect and present user activity information for a fictional music streaming service called Sparkify. The project is separated into two parts:
 
-1) Creating an ETL Pipeline for Pre-Processing the Files
+### 1) Creating an ETL Pipeline for Pre-Processing the Files
 
-2) Inserting the data into Apache Cassandra and running queries
+In this part of the project, we process the raw data found in the `.csv` files in the `event-data/` folder. Extracting the data we want from them, we combine them into a single `event_datafile_new.csv` file. 
 
-To begin, complete the steps listed under the `Setup` section below and then open the `Project_1B.ipynb` Jupyter notebook.
+### 2) Inserting the data into Apache Cassandra and running queries
+
+We then read the data in the `event_datafile_new.csv` file and load them into Cassandra tables that we create in order to run specific queries. The rationale for each table's unique design is discussed in-line.
+
+Each section can be run cell-by-cell, and the output for each of the queries will appear immediately below where they are run.
 
 # Files
 ```
