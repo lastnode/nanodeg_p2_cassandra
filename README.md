@@ -21,14 +21,14 @@ To begin, complete the steps listed under the `Setup` section below and then ope
 
 In order to run these Python scripts, you will first need to install Python 3 on your computer, and then install the following Python modules via [pip](https://pypi.org/project/pip/) or [anaconda](https://www.anaconda.com/products/individual):
 
-- [jupyterlab](https://jupyter.org/) - a package that allows you to open Jupyter notebooks.
+- [jupyter](https://jupyter.org/) - a package that allows you to open Jupyter notebooks.
 - [cassandra-driver](https://docs.datastax.com/en/developer/python-driver/3.23/) - a Cassandra database driver for Python.
 - [Numpy](https://numpy.org/) - a math/science package for Python.
 - [Pandas](https://pandas.pydata.org/) - a data analysis package for Python.
 
 To install these via `pip` you can run:
 
-`pip install jupyterlap cassandra-driver numpy pandas`
+`pip install jupyterlab cassandra-driver numpy pandas`
 
 After these packages have been successfully installed, head to the project folder and open a Jupyter notebook by running:
 
